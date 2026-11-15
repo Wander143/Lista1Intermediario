@@ -12,10 +12,11 @@ if senha == "senhasegura123":
     elif idade >= 13:
         print("\nVocê recebeu a Poção Mágica!\n")
 
-    persona = int(input("Você prefere\n 1-Sorvete\n 2-Bolo  \n"))
-    
     moedas = int(input("Quanto de moedas tem?   "))
 
+    persona = int(input("Você prefere\n 1-Sorvete\n 2-Bolo  \n"))
+    
+    
     if persona == 1:
         comprar = input("\nVocê gostaria de comprar o Cetro de Gelo? S/N (55 moedas)  ")
 
@@ -26,8 +27,10 @@ if senha == "senhasegura123":
             else:
                 print("\n Desculpe, moedas insuficientes.")
                 print("\nVocê saiu da Taverna de mão vazias")
-        else:
+        elif comprar == "N":
                 print("\nVocê saiu da Taverna de mão vazias")
+        else:
+            print("Nenhuma opção encontrada")
 
     elif persona == 2:
         comprar = input("Você gostaria de comprar o Escudo de Slime? S/N (25 moedas)  ")
@@ -39,9 +42,13 @@ if senha == "senhasegura123":
             else:
                 print("\n Desculpe, moedas insuficientes.")
                 print("\nVocê saiu da Taverna de mão vazias")
-        else:
+        elif comprar == "N":
                 print("\nVocê saiu da Taverna de mão vazias")
-
+        else:
+            print("Nenhuma opção encontrada")
+    else:
+        print("Nenhuma opção encontrada")
+            
 else:
     print("Sua entrada foi negada, volte quando souber a senha!")
 
